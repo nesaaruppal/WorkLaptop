@@ -1,0 +1,10 @@
+LICENSE.txt
+README.md
+setup.py
+pretty_html_table/__init__.py
+pretty_html_table/pretty_html_table.py
+pretty_html_table.egg-info/PKG-INFO
+pretty_html_table.egg-info/SOURCES.txt
+pretty_html_table.egg-info/dependency_links.txt
+pretty_html_table.egg-info/requires.txt
+pretty_html_table.egg-info/top_
