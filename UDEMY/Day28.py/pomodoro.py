@@ -10,12 +10,15 @@ WORK_MIN = 25
 SHORT_BREAK_MIN = 5
 LONG_BREAK_MIN = 20       
 REPS = 0 
+timer = None
 
-#"01:35"
-#300
-#245/60 = 4 minutes
-#245 % 60 = (remainder)
-
+def reset_timer():
+    window.after_cancel(timer)
+    canvas.itemconfig(timer_text, text="00:00")
+    label_timer.config(text="TIMER", font=("Times New Roman", 24, "bold"), fg=GREEN, bg=YELLOW)
+    label_check.config(text="")
+    global REPS
+    REPS = 0 
 
 def start_timer():
     global REPS
@@ -26,42 +29,15 @@ def start_timer():
     
     if REPS % 8 == 0:
         countdown(long_break)
+        label_timer.config(text="Break", font=("Times New Roman", 28, "bold"), fg=RED)
     elif REPS % 2 == 0:
         countdown(short_break)
-    elif REPS % 2 != 0:
-        countdown(short_break)
+        label_timer.config(text="Break", font=("Times New Roman", 28, "bold"), fg=PINK)
     else:
         countdown(work_sec)
-    
-    #IF 1/3/5/7 repetition:
-    # countdown(work_sec)
-    #IF 2/4/6 repetition
-    # countdown(short_break)
-    #IF 8 repetition:
-    # countdown(long_break)
-    
-    #if REPS == 1:
-    #    countdown(work_sec)
-    #    REPS += 1
-    #elif REPS == 2:
-    #    countdown(short_break)
-    #    REPS += 1
-    #elif REPS == 3:
-    #    countdown(work_sec)
-    #    REPS += 1
-    #elif REPS == 4:
-    #    countdown(short_break)
-    #    REPS += 1
-    #elif REPS == 5:
-    #    countdown(work_sec)
-    #elif REPS == 6:
-    #    countdown(short_break)
-    #elif REPS == 7:
-    #    countdown(work_sec)
-    #elif REPS % 8 == 0:
-    #    countdown(long_break)    
-    
-        
+        label_timer.config(text="Work", font=("Times New Roman", 28, "bold"), fg=GREEN)
+
+
 def countdown(count):
     count_min = math.floor(count/60)
     count_sec = (count % 60)
@@ -73,7 +49,17 @@ def countdown(count):
         
     canvas.itemconfig(timer_text, text=f"{count_min}:{count_sec}")
     if count > 0:
-        window.after(1000, countdown, count-1)
+        # We want to cancel the following
+        # So we give it a name
+        global timer
+        timer = window.after(1000, countdown, count-1)   
+    else:
+        start_timer()
+        mark = ""
+        work_sessions = math.floor(REPS/2)
+        for _ in range(work_sessions):
+            mark += "✅"
+        label_check.config(text=mark)
     
 
 window = Tk()
@@ -90,14 +76,15 @@ canvas.grid(row=2, column=2)
 
 label_timer = Label(text="TIMER", font=("Times New Roman", 24, "bold"), fg=GREEN, bg=YELLOW)
 label_timer.grid(row=1, column=2)
-label_check = Label(text="✅", bg= YELLOW, fg=GREEN, highlightthickness=0)
+
+label_check = Label(bg= YELLOW, fg=GREEN, highlightthickness=0)
 label_check.grid(row=4, column=2)
 
 start_button = Button(text="Start", command=start_timer)
 start_button.grid(row=3, column=1)
 
 
-reset_button = Button(text="Reset")
+reset_button = Button(text="Reset", command=reset_timer)
 reset_button.grid(row=3, column=3)
 
 

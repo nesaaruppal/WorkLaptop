@@ -29,3 +29,8 @@ LONG_BREAK_MIN = 20
 # Changing the data type by creating a variable and simply changing
 a = 3
 a = "Hello"
+
+
+
+# window.after_cancel()
+# Cancels any previous timers which have been created 

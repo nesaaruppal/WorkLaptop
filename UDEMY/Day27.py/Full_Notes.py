@@ -9,7 +9,7 @@ window.minsize(width=500, height=500)
 label = Label(text="This is old text")
 label.config(text="This is new text")
 label.pack()
-
+ 
 #Buttons
 def action():
     print("Do something")
