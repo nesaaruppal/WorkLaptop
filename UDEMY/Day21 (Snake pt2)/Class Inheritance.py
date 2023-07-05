@@ -11,7 +11,7 @@ class Animal:
         # print("Moving in water.")
 
 class Fish(Animal):
-   def __init__(self):
+    def __init__(self):
         super().__init__()
 
     def swim(self):

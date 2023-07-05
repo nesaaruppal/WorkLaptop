@@ -1,2 +1,1 @@
-# Create your own module
-pi = 3.14159246
+pi = 3.141597

@@ -1,8 +1,8 @@
 from sysconfig import is_python_build
 from tkinter import OFF
-from Classes_Coffee import Menu
-from Classes_Coffee import CoffeeMaker
-from Classes_Coffee import MoneyMachine
+from CoffeeMachine import Menu
+from CoffeeMachine import CoffeeMaker
+from CoffeeMachine import MoneyMachine
 
 menu = Menu()
 coffee_maker = CoffeeMaker()
