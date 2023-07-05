@@ -19,7 +19,7 @@ def save():
     else:
         is_okay = messagebox.askokcancel(title=website_entry, message=f"These are the details entered:\n Email: {email}\n Password:{password}.\nIs it okay to save?")
         if is_okay:
-            with open (r"C:\Users\NUppal\OneDrive - CBRE, Inc\CBRE\VSC\Python\UDEMY\UDEMY\Day29.py\data.txt", mode="a") as file1:
+            with open (r"C:\Users\NUppal\OneDrive - CBRE, Inc\CBRE\VSC\Python\UDEMY\UDEMY\Day29 (Password Manager)\data.txt", mode="a") as file1:
                 file1.write(f"{website} | {email} | {password}\n")
                 website_entry.delete(0, END)
                 password_entry.delete(0, END)
@@ -41,13 +41,12 @@ def random_password():
   
   password_entry.insert(0, password)
 
-
 window = Tk()
 window.title("Password Manager")
 window.config(padx=20, pady=20, bg="white")
 
 canvas = Canvas(width=200, height=200, highlightthickness=0, bg="white")
-paddlock_img = PhotoImage(file=r"C:\Users\NUppal\OneDrive - CBRE, Inc\CBRE\VSC\Python\UDEMY\UDEMY\Day29.py\logo.png")
+paddlock_img = PhotoImage(file=r"C:\Users\NUppal\OneDrive - CBRE, Inc\CBRE\VSC\Python\UDEMY\UDEMY\Day29 (Password Manager)\logo.png")
 canvas.create_image(100, 100, image=paddlock_img)
 canvas.grid(row=0, column=1)
 
@@ -64,7 +63,7 @@ password_label.grid(row=3, column=0, sticky=W)
 
 #ENTERED TEXT
 website_entry = Entry(width=35)
-website_entry.grid(row=1, column=1, columnspan=2, sticky=W)
+website_entry.grid(row=1, column=1, sticky=W)
 website_entry.focus()
 
 email_entry = Entry(width=35)
@@ -80,5 +79,8 @@ gen_pw.grid(row=3, column=2, sticky=W)
 
 add_button = Button(width=36, text="Add", command=save)
 add_button.grid(row=4, column=0, columnspan=3)
+
+search_button = Button(text="Search", width=13)
+search_button.grid(row=1, column=2)
 
 window.mainloop()

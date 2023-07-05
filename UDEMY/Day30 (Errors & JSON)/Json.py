@@ -76,13 +76,29 @@ def random_password():
     
     password_entry.insert(0, password)
 
+def find_password():
+    website = website_entry.get()
+    try:
+        with open (r"C:\Users\NUppal\OneDrive - CBRE, Inc\CBRE\VSC\Python\UDEMY\data.json") as data_file:
+            data = json.load(data_file)
+    except FileNotFoundError:
+            messagebox.showinfo(title="Error!", message="No Data File Found!")
+    else:
+        if website in data:
+            email = data[website]["email"]
+            password = data[website]["password"]
+            messagebox.showinfo(title=website, message=f"Email: {email}\nPassword: {password}")
+        else:
+            messagebox.showinfo(title="Error!", message=f"No details for {website} saved!")
+            
+            
 
 window = Tk()
 window.title("Password Manager")
 window.config(padx=20, pady=20, bg="white")
 
 canvas = Canvas(width=200, height=200, highlightthickness=0, bg="white")
-paddlock_img = PhotoImage(file=r"C:\Users\NUppal\OneDrive - CBRE, Inc\CBRE\VSC\Python\UDEMY\UDEMY\Day29.py\logo.png")
+paddlock_img = PhotoImage(file=r"C:\Users\NUppal\OneDrive - CBRE, Inc\CBRE\VSC\Python\UDEMY\UDEMY\Day29 (Password Manager)\logo.png")
 canvas.create_image(100, 100, image=paddlock_img)
 canvas.grid(row=0, column=1)
 
@@ -98,15 +114,15 @@ password_label.grid(row=3, column=0, sticky=W)
 
 
 #ENTERED TEXT
-website_entry = Entry(width=35)
-website_entry.grid(row=1, column=1, columnspan=2, sticky=W)
+website_entry = Entry(width=35, bg=GREEN)
+website_entry.grid(row=1, column=1, sticky=W)
 website_entry.focus()
 
-email_entry = Entry(width=35)
+email_entry = Entry(width=35, bg=GREEN)
 email_entry.grid(row=2, column=1, columnspan=2, sticky=W)
 email_entry.insert(0, "nesaar97@gmail.com")
 
-password_entry = Entry(width=21)
+password_entry = Entry(width=21, bg=GREEN)
 password_entry.grid(row=3, column=1, sticky=W)
 
 #BUTTONS 
@@ -115,5 +131,8 @@ gen_pw.grid(row=3, column=2, sticky=W)
 
 add_button = Button(width=36, text="Add", command=save)
 add_button.grid(row=4, column=0, columnspan=3)
+
+search_button = Button(text="Search", command=find_password)
+search_button.grid(row=1, column=2)
 
 window.mainloop()
