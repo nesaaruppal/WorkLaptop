@@ -68,7 +68,7 @@ window.config(padx=50, pady=50, bg=YELLOW)
 
 
 canvas = Canvas(width=300, height=300, bg=YELLOW, highlightthickness=0)
-tomato_img = PhotoImage(file=r"C:\Users\NUppal\OneDrive - CBRE, Inc\CBRE\VSC\Python\UDEMY\UDEMY\Day28.py\tomato.png")
+tomato_img = PhotoImage(file=r"C:\Users\NUppal\OneDrive - CBRE, Inc\CBRE\VSC\Python\UDEMY\UDEMY\Day28 (Pomodoro App GUI)\Pomodoro App\tomato.png")
 canvas.create_image(150, 175, image=tomato_img)
 timer_text = canvas.create_text(150, 175, text="00:00", font=("Times New Roman", 28, "bold"), fill="white")
 canvas.grid(row=2, column=2)
