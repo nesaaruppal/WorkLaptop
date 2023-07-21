@@ -1,6 +1,6 @@
 from turtle import Turtle
 
-FONT = ("Courier", 16, "normal")
+FONT = ("Cascadia Code", 16, "bold")
 
 class Scoreboard(Turtle):
     def __init__(self):

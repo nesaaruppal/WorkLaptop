@@ -1,30 +1,53 @@
 print("Welcome to the Love Calculator!")
-name1 = input("What is your name? \n").lower
-name2 = input("What is their name? \n").lower
+name1 = input("What is your name? \n")
+name2 = input("What is their name? \n")
 
-name1_letters = 0
+combined_names = name1 + name2
+lower_names = combined_names.lower()
+t = lower_names.count("t")
+r = lower_names.count("r")
+u = lower_names.count("u")
+e = lower_names.count("e")
+first_digit = t + r + u + e
 
-for letter in name1:
-    if letter == "T":
-        name1_letters += 1
-        if letter == "R":
-            name1_letters += 1
-            if letter == "U":
-                name1_letters += 1
-                if letter == "E":
-                    name1_letters += 1
+l = lower_names.count("l")
+o = lower_names.count("o")
+v = lower_names.count("v")
+e = lower_names.count("e")
+second_digit = l + o + v + e
 
-name2_letters = 0
+score = int(str(first_digit) + str(second_digit))
 
-for letters in name2:
-    if letters == "L":
-        name2_letters += 1
-        if letters == "O":
-            name2_letters += 1
-            if letters == "V":
-                name2_letters += 1
-                if letters == "E":
-                    name2_letters += 1
+if (score < 10) or (score > 90):
+  print(f"Your score is {score}, you go together like coke and mentos.")
+elif (score >= 40) and (score <= 50):
+  print(f"Your score is {score}, you are alright together.")
+else:
+  print(f"Your score is {score}.")
 
-print(name1_letters)
-print(name2_letters)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

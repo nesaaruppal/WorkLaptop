@@ -8,7 +8,7 @@ def convert():
 
 window = Tk()
 window.title("Mile to KM Converter")
-window.minsize(width=300, height=300)
+window.minsize(width=100, height=100)
 
 input = Entry(width=20)
 input.grid(row=3, column=2)

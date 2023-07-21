@@ -16,10 +16,7 @@ scoreboard = Scoreboard()
 screen.listen()
 screen.onkey(player.move, "Up")
 
-
-
 game_is_on = True
-
 while game_is_on:
     time.sleep(0.1)
     screen.update()
@@ -32,13 +29,10 @@ while game_is_on:
         if car.distance(player) < 20:
             game_is_on = False
             
-
     if player.is_at_finish_line():
         screen.update()
         player.go_to_start()
         car_manager.level_up()
         scoreboard.update_scoreboard()
             
-
-
 screen.exitonclick()
