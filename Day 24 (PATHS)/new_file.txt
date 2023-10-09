@@ -1,0 +1,2 @@
+This is a new file.
+With new text added by 'Open' and 'Write'.

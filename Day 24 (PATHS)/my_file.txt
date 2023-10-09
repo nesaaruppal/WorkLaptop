@@ -1,0 +1,7 @@
+Hello World!
+This is my first text document.
+Use "File Path" with open (seems to actually work.)
+Mode is default to "R" (Read)
+"W" will OVERWRITE everything in the text file.
+"A" will append it. 
+This is me adding new text using mode=a.
