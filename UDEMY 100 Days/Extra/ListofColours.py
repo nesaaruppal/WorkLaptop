@@ -1,0 +1,1 @@
+colours = ["red", "yellow", "pink", "blue", "orange", "purple", "green", "CornflowerBlue","DarkOrchid", "IndianRed", "DeepSkyBlue", "LightSeaGreen", "wheat", "SlateGray", "SeaGreen"]

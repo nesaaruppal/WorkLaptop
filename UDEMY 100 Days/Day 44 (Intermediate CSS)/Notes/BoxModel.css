@@ -1,0 +1,52 @@
+/* BOX MODEL */
+
+/* Margin, Padding and Borders*/
+
+/*
+- Can set height and width using pixels
+- Can ALSO use percentages
+    E.G.
+    width: 100% --> Fill the entire width of the page */
+
+/*
+- Can also set a border
+- (Thickness [space] Style [space] Colour;)
+    E.g.
+        border: 10px solid black
+    OR
+        border: 20px dashed blue
+    etc ...*/
+
+/*
+- Can modify the border with more specific rules 
+    E.G.
+    border: 30px solid black; (1)
+        border-top: 0px; (2)
+        - This will remove the top border - as it is set to 0 pixels - but will look at the first piece of code before moving on to the second line 
+
+- Border Width works in a similar way 
+    E.G.
+    border: 30px solid black; 
+        border-width: 0px 10px 20px 30px; (MAXIMUM of 4 values)
+        1. = TOP
+        2. = RIGHT
+        3. = BOTTOM
+        4. = LEFT
+        --> Can use 1&3 or 2&4 if you just want to adjust the top and bottom or the side borders
+*/
+
+/* PADDING */
+/*
+- Pushes the border OUT by the specified amount (E.g. 20px)
+- Can make text easier to read
+- The height and width of the "box" DOES NOT change
+    padding: 20px
+*/
+
+/* MARGIN */
+/*
+- Part that is outside the border
+- Space between the border and ANY other content on-screen is the margin
+    E.G.
+    margin: 10px
+*/ 
