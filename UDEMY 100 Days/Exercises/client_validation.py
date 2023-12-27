@@ -32,7 +32,7 @@ def example():
     print("Creating new api key...")
     api_key = client.new_keys.create(friendly_name="ClientValidationApiKey")
 
-    # Generate a new RSA Keypair
+    # Generate a new RSA Key_pair
     print("Generating RSA key pair...")
     key_pair = rsa.generate_private_key(
         public_exponent=65537, key_size=2048, backend=default_backend()
