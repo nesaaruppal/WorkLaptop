@@ -1,3 +1,5 @@
+
+
 ##### LOCATORS #####
 
 # class_name (locates elements whose class name matches)
@@ -5,7 +7,7 @@
 # id (locates elements matching the ID attribute)
 # name (locates elements matching a NAME)
 # link_text (locates elements whose VISIBLE text matches the search value )
-# parial_link_text (locates ANCHOR elements whose VISIBLE text contains the search value --> only the first will be selected. )
+# partial_link_text (locates ANCHOR elements whose VISIBLE text contains the search value --> only the first will be selected. )
 # tag_name (locates elements matching a tag_name)
 # xpath (locates elements matching an XPath expression)
 
