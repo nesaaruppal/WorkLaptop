@@ -1,4 +1,6 @@
 print("Blackbox AI Code!")
+
+
 def get_top_note(student):
     """
     Function that takes a dictionary of objects and returns a dictionary of objects
@@ -26,13 +28,13 @@ def get_top_note(student):
 
     return updated_student
 
+
 students = [
-    { "name": "John", "notes": [3, 5, 4] },
-    { "name": "Emma", "notes": [4, 3, 2] },
-    { "name": "Sophia", "notes": [5, 5, 5] }
+    {"name": "John", "notes": [3, 5, 4]},
+    {"name": "Emma", "notes": [4, 3, 2]},
+    {"name": "Sophia", "notes": [5, 5, 5]}
 ]
 
 students_with_top_note = [get_top_note(student) for student in students]
 
 print(students_with_top_note)
-
