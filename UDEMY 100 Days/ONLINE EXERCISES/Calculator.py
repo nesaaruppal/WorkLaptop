@@ -122,7 +122,7 @@ def calculator():
         results = []
         print('Calculator in Python!')
         print('Enter \'a\' for addition')
-        print('Enter \'s\' for substraction')
+        print('Enter \'s\' for subtraction')
         print('Enter \'m\' for multiplication')
         print('Enter \'d\' for division')
         print('Enter \'q\' to quit')
