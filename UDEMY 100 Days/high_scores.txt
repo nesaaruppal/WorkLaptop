@@ -1,0 +1,7 @@
+{'name': 'Nez', 'score': 0}
+{'name': 'Nez', 'score': 0}
+{'name': 'Nez', 'score': 1}
+{'name': 'Nesaar', 'score': 1}
+{'name': 'Nesaar', 'score': 2}
+{'name': 'Nesaar', 'score': 2}
+{'name': 'Nesaar', 'score': 2}

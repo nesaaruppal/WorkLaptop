@@ -57,7 +57,7 @@ african_countries = [
     "Uganda",
     "Zambia",
     "Zimbabwe",
-].lower()
+]
 
 
 def play_game():
